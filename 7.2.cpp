@@ -4,17 +4,16 @@
 
 using namespace std;
 
-void ham(int n, int i ){
+void ham(int n, int i){
+    int so;
     if(i > n){
-        return n;
+        return;
     }
-    else{
-        int uoc = (n % i == 0) ? i : 0;
-        if (uoc > 0)
-            cout << uoc << endl;
-        return ham(n, i +1);
-    }
+    if(n % i == 0)
+        cout << i << endl;
+    return ham(n, i + 1);
 }
+
 int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
