@@ -15,11 +15,9 @@ int main(){
     for(int i = 2; i <= min_val; i++){
         int dem = 0;
         for(int j = 0; j < n; j++){
-            if (mang[j] % i == 0) 
-                dem += 1;
+            if (mang[j] % i == 0) dem += 1;
         }
-        if(dem == n) 
-            res += 1;
+        if(dem == n) res += 1;
     }
     cout << res << endl;
     return 0;
